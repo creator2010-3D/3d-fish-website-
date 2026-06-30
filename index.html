@@ -3,174 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Underwater World & Blog</title>
-    <!-- Premium Google Fonts -->
+    <title>3D Underwater World & Legendary Blog</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- Three.js Library -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
-    <style>
-        /* === BASE CSS === */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #001a33 0%, #000000 100%);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        /* 3D Canvas fixed in background */
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            pointer-events: none; /* Let clicks pass through to content */
-        }
-
-        /* === UI & CONTENT STYLES === */
-        main {
-            position: relative;
-            z-index: 1;
-        }
-
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 15px rgba(0, 150, 255, 0.5);
-            animation: floatText 3s ease-in-out infinite;
-        }
-
-        p.subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            opacity: 0.8;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 50px;
-            font-size: 0.9rem;
-            opacity: 0.6;
-            animation: blink 2s infinite;
-        }
-
-        /* Premium Glassmorphism Blog Cards */
-        .blog-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1000px;
-            margin-top: 50px;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: left;
-            transition: transform 0.3s ease, border 0.3s ease;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border: 1px solid rgba(0, 150, 255, 0.5);
-        }
-
-        .glass-card h3 {
-            color: #ff9900;
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-
-        /* Animations */
-        @keyframes floatText {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.8; }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 3D Environment -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Scrollable Website Content -->
     <main>
-        <!-- Hero Section -->
         <section id="home">
             <h1>Deep Ocean</h1>
             <p class="subtitle">Experience the Interactive 3D Web</p>
             <div class="scroll-indicator">↓ SCROLL TO DIVE ↓</div>
         </section>
 
-        <!-- About Section -->
         <section id="about">
-            <h2 style="font-size: 2.5rem;">Explore The Unknown</h2>
+            <h2>Explore The Unknown</h2>
             <p style="max-width: 600px; line-height: 1.8; opacity: 0.9;">
                 This environment is dynamically generated using mathematics and WebGL. As you scroll down, the camera sinks deeper into the ocean, and the 3D fish smoothly follows your cursor's path without any lag.
             </p>
         </section>
 
-        <!-- Blog Section Placeholder -->
         <section id="blog">
-            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Latest Blogs</h2>
-            <p style="opacity: 0.8;">Your future content will look legendary here.</p>
+            <h2 style="margin-bottom: 10px;">Legendary Blogs</h2>
+            <p style="opacity: 0.8;">Premium glassmorphism cards for your content.</p>
             
             <div class="blog-container">
                 <div class="glass-card">
                     <h3>The Coral Reef</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Dive into the mesmerizing world of coral reefs and discover the vibrant life hidden beneath the waves.</p>
                 </div>
                 <div class="glass-card">
                     <h3>Deep Sea Mysteries</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Uncovering the secrets of the Mariana Trench and the alien-like creatures that glow in the dark.</p>
                 </div>
                 <div class="glass-card">
                     <h3>Save The Oceans</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Actionable steps we can take today to preserve our beautiful aquatic ecosystems for the future.</p>
                 </div>
             </div>
         </section>
         
-        <!-- Footer Spacer -->
         <section style="min-height: 30vh;">
-            <p style="opacity: 0.5;">Developed with ❤️ inside GitHub Pages</p>
+            <p style="opacity: 0.5;">Developed with ❤️ for the Legendary Web</p>
         </section>
     </main>
 
-    <!-- Yahan Humari JavaScript File Link Ho Rahi Hai -->
     <script src="script.js"></script>
 
 </body>
 </html>
+
