@@ -1,0 +1,122 @@
+/* === PREMIUM 3D UNDERWATER STYLING === */
+
+/* 1. Global Reset aur Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    /* Deep ocean gradient background */
+    background: linear-gradient(180deg, #001a33 0%, #000000 100%);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scroll for legendary feel */
+}
+
+/* 2. 3D Canvas ko background mein fix karna */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Isse canvas text ke peeche rahega */
+    pointer-events: none; /* Clicks canvas se pass hoke button tak jaenge */
+}
+
+/* 3. Main Content Layout */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    min-height: 100vh; /* Har section screen ke barabar hoga */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 4. Glowing Typography */
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* Cyan color ka glowing shadow */
+    text-shadow: 0 4px 20px rgba(0, 212, 255, 0.6);
+    animation: floatText 3s ease-in-out infinite; /* Text tairta hua feel hoga */
+}
+
+p.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #00d4ff;
+    opacity: 0.9;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    animation: blink 2s infinite;
+}
+
+/* 5. The Legendary Glassmorphism Blog System */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.glass-card {
+    /* Glass effect banane ke liye transparent background aur blur */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For iPhone support */
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    
+    /* Hover ke time smoothly bounce karne ke liye transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card:hover {
+    transform: translateY(-12px) scale(1.02); /* Hover karne par pop up hoga */
+    border: 1px solid rgba(0, 212, 255, 0.5); /* Glow border */
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+}
+
+.glass-card h3 {
+    color: #ff6600; /* Fish ke orange color se match karta hua */
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* 6. Cool Animations */
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.8; }
+}
+
+/* 7. Mobile Responsiveness (Phone par aacha dikhne ke liye) */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .glass-card { padding: 20px; }
+}
+
