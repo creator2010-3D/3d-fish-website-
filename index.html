@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProWeb 3D | The Future</title>
-    <!-- Premium Fonts: Orbitron for Sci-Fi Headings, Poppins for Text -->
+    <title>Aryan Raj | 3D Digital Workspace</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -16,8 +15,7 @@
 
     <!-- Professional Navigation -->
     <nav class="navbar">
-        <div class="logo">ProWeb <span style="color: #ff6600;">3D</span></div>
-        <!-- 3 Line Hamburger Button -->
+        <div class="logo">ARYAN <span style="color: #ff3300;">RAJ</span></div>
         <div class="menu-btn" id="menu-btn">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -30,68 +28,186 @@
         <span class="close-btn" id="close-btn">&times;</span>
         <ul class="overlay-links">
             <li><a href="#home" class="menu-link">Home</a></li>
-            <li><a href="#about" class="menu-link">About Creator</a></li>
+            <li><a href="#about" class="menu-link">About Me</a></li>
             <li><a href="#tools" class="menu-link">Pro Tools</a></li>
-            <li><a href="#blog" class="menu-link">Read Blogs</a></li>
+            <li><a href="#blog" class="menu-link">Legendary Articles</a></li>
         </ul>
     </div>
 
+    <!-- Article Reading Modal (Pop-up) -->
+    <div class="article-modal" id="article-modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <img id="modal-img" src="" alt="Article Image">
+            <h2 id="modal-title" style="font-family: 'Orbitron'; color: #00d4ff;"></h2>
+            <div id="modal-body" class="modal-body-text"></div>
+        </div>
+    </div>
+
     <main>
-        <!-- Home Section -->
+        <!-- Hero Section -->
         <section id="home">
-            <h1 class="glitch-text">Enter the <br><span class="highlight">Abyss</span></h1>
-            <p class="subtitle">Next-Generation Interactive 3D Web Experience</p>
-            <div class="scroll-indicator">Explore The Depths ↓</div>
+            <h1 class="glitch-text">God Level <br><span class="highlight">Ecosystem</span></h1>
+            <p class="subtitle">Advanced 3D Interfaces & Automated Workflows</p>
+            <div class="scroll-indicator">Dive Into The Matrix ↓</div>
         </section>
 
         <!-- About Creator Section -->
         <section id="about">
-            <h2 class="section-title">The Architect</h2>
-            <div class="glass-card profile-card">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Workspace" class="blog-img">
-                <h3 style="color: #00d4ff; font-family: 'Orbitron', sans-serif;">Mamta Kumari</h3>
-                <p>Welcome to my digital workspace. I specialize in building custom branded mobile applications and producing customized video animations. This platform is a bridge between high-performance interactive 3D web technologies, advanced digital workflows, and seamless automated ecosystems.</p>
+            <h2 class="section-title">The Mastermind</h2>
+            <div class="glass-card profile-card" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Aryan Raj Workspace" style="border-radius: 15px; width: 200px; height: 200px; object-fit: cover;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: #00d4ff; font-family: 'Orbitron', sans-serif; font-size: 2rem; margin: 0;">Aryan Raj</h3>
+                    <p style="color: #ff3300; font-weight: bold; margin-top: 5px;">Lead Digital Architect & Developer</p>
+                    <p>Welcome to my god-level workspace. I specialize in architecting high-end digital environments, integrating automated payment gateways, and deploying custom mobile applications. From structuring PDF APIs to rendering lag-free WebGL 3D graphics, this platform showcases the pinnacle of modern web technology.</p>
+                </div>
             </div>
         </section>
 
         <!-- Tools Section -->
         <section id="tools">
-            <h2 class="section-title">Professional Utilities</h2>
-            <div class="glass-card">
-                <h3>Secure Password Generator</h3>
-                <p>Generate highly secure, encrypted passwords instantly.</p>
+            <h2 class="section-title">Utility Dashboard</h2>
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+                <h3>Military-Grade Password Generator</h3>
+                <p>Secure your digital assets with high-entropy cryptographic keys.</p>
                 <div class="tool-ui">
-                    <input type="text" id="password-display" readonly placeholder="Your password will appear here">
-                    <button id="generate-btn">Generate Security Key</button>
+                    <input type="text" id="password-display" readonly placeholder="Key will appear here">
+                    <button id="generate-btn">Execute Key Generation</button>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Section with HD Pictures -->
+        <!-- Blog Section (10 God-Level Articles) -->
         <section id="blog">
-            <h2 class="section-title">Legendary Articles</h2>
-            
+            <h2 class="section-title">The Archive (10 Articles)</h2>
             <div class="blog-container">
-                <!-- Blog 1 -->
-                <article class="glass-card full-blog">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Mobile Apps" class="blog-img">
-                    <h3>The Future of Custom Mobile Apps</h3>
-                    <p class="date">June 30, 2026</p>
-                    <p>In today's fast-paced digital ecosystem, the ability to build custom branded mobile applications rapidly is no longer a luxury, it's a necessity. Integrating APIs directly into your workflow reduces manual labor by hours. The future belongs to those who can stitch these utility platforms together.</p>
+
+                <!-- Article 1 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data" class="blog-img">
+                    <h3 class="card-title">Tracking Large-Scale Data Systems</h3>
+                    <p class="preview">Analyzing the architecture behind government portals and automated tracking...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Handling massive influxes of user data requires robust backend tracking systems. When we look at technical service commissions or large-scale state health society portals, the primary challenge is real-time database querying without crashing the server.</p>
+                        <p>Optimizing these platforms involves load balancing and caching exam status tracking or answer keys so that thousands of concurrent users experience zero lag. This is the foundation of high-performance data tracking.</p>
+                    </div>
                 </article>
 
-                <!-- Blog 2 -->
-                <article class="glass-card full-blog">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="3D Graphics" class="blog-img">
-                    <h3>Navigating WebGL & 3D Web</h3>
-                    <p class="date">June 25, 2026</p>
-                    <p>Adding 3D elements to web browsers has revolutionized how we interact with the web. By rendering graphics directly on the GPU, we can create immersive environments—like this very ocean—without sacrificing performance or causing lag on mobile devices.</p>
+                <!-- Article 2 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Payments" class="blog-img">
+                    <h3 class="card-title">Automated Financial Workflows</h3>
+                    <p class="preview">How electronic payment gateways and auto-debits run the modern web...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>The modern internet runs on seamless financial transactions. Integrating systems like automated clearing networks, recurring auto-debits, and electronic payment gateways transforms a basic website into a self-sustaining business.</p>
+                        <p>By connecting APIs to these gateways, businesses can manage automated loan servicing, digital subscriptions, and instant ledger updates without any manual human intervention. It is the ultimate digital automation.</p>
+                    </div>
                 </article>
+
+                <!-- Article 3 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=600&q=80" alt="Mobile App" class="blog-img">
+                    <h3 class="card-title">Rapid Mobile App Deployment</h3>
+                    <p class="preview">Using website development platforms to build custom branded mobile apps...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Building a mobile application used to take months of hard coding. Today, utilizing powerful software utility platforms and advanced site builders allows developers to deploy custom branded mobile apps in a fraction of the time.</p>
+                        <p>These agile platforms handle the heavy lifting of UI/UX design, allowing developers to focus on integrating core features like user authentication, push notifications, and real-time database syncing.</p>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="E-Sports" class="blog-img">
+                    <h3 class="card-title">Next-Gen E-Sports Interfaces</h3>
+                    <p class="preview">Designing high-octane digital environments for competitive gaming...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Competitive gaming platforms demand split-second responsiveness. Building interfaces for e-sports or high-intensity mobile games requires minimizing latency and maximizing visual feedback through CSS animations and WebGL.</p>
+                        <p>From handling recurring subscriptions for digital items to managing live-action player dashboards, the UI must be aggressive, dark-themed, and incredibly fast, much like this very website.</p>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?auto=format&fit=crop&w=600&q=80" alt="PDF API" class="blog-img">
+                    <h3 class="card-title">Integrating PDF Utility APIs</h3>
+                    <p class="preview">Automating document generation and processing through web APIs...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Documentation is the backbone of any professional service. By integrating external PDF APIs into web workflows, platforms can automatically generate invoices, certificates, or diagnostic reports instantly upon a user's action.</p>
+                        <p>This eliminates the need for manual data entry. You send a JSON payload to the API, and it returns a perfectly formatted, branded PDF document ready for the user to download.</p>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=600&q=80" alt="E-commerce" class="blog-img">
+                    <h3 class="card-title">The Future of E-Commerce UI</h3>
+                    <p class="preview">Selling luxury items and complex inventories online with 3D views...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>When selling high-end products, such as designer jewelry, mangalsutras, or luxury watches, standard 2D images are no longer enough. The future of e-commerce lies in interactive 3D product viewers.</p>
+                        <p>Allowing a customer to rotate, zoom, and inspect a luxury item directly in their mobile browser dramatically increases conversion rates and provides a premium shopping experience.</p>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Mapping" class="blog-img">
+                    <h3 class="card-title">The Power of Location Data</h3>
+                    <p class="preview">Evaluating regional businesses through crowd-sourced mapping platforms...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Digital mapping platforms rely heavily on community-driven data. When users enroll and submit reviews, they are directly shaping the local economic landscape by providing verifiable insights into regional businesses.</p>
+                        <p>Integrating these map APIs into custom web applications allows developers to create hyper-local tools, connecting consumers with diagnostic centers, educational institutes, and retail stores efficiently.</p>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Security" class="blog-img">
+                    <h3 class="card-title">Web Security & Cryptography</h3>
+                    <p class="preview">Protecting user data and authenticating sessions securely...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>As websites become more complex, security cannot be an afterthought. From secure password generation to managing binding codes for device pairing, cryptographic security is essential.</p>
+                        <p>Modern web apps must use high-entropy hashing algorithms, secure HTTP cookies, and robust parental control configurations to ensure that user data remains impenetrable from outside attacks.</p>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="3D web" class="blog-img">
+                    <h3 class="card-title">Mastering Three.js Graphics</h3>
+                    <p class="preview">Rendering lag-free 3D models and particle engines in the browser...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Three.js has unlocked the GPU of the standard web browser. Creating legendary environments, like underwater particle systems and interactive 3D models, is now possible on smartphones.</p>
+                        <p>The secret is managing the 'draw calls' and keeping polygon counts optimized. When executed correctly, the user experiences a lag-free, butter-smooth 60 frames-per-second interactive masterpiece.</p>
+                    </div>
+                </article>
+
+                <!-- Article 10 -->
+                <article class="glass-card article-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Hardware" class="blog-img">
+                    <h3 class="card-title">The Architect's Hardware</h3>
+                    <p class="preview">The physical tools required to build god-level digital ecosystems...</p>
+                    <button class="read-more-btn">Read Full Article</button>
+                    <div class="full-content" style="display: none;">
+                        <p>Software is only as good as the hardware it runs on. For developers pushing the boundaries of WebGL, compiling custom mobile apps, and editing customized video animations, serious computing power is required.</p>
+                        <p>High-refresh-rate monitors, multi-core processors for rapid code compilation, and dedicated GPUs for rendering 3D graphics ensure that the developer can visualize their code in real-time without bottlenecks.</p>
+                    </div>
+                </article>
+
             </div>
         </section>
         
         <section style="min-height: 15vh;">
-            <p style="opacity: 0.5; letter-spacing: 2px;">Designed with precision.</p>
+            <p style="opacity: 0.5; letter-spacing: 2px;">Architected by Aryan Raj | System Online</p>
         </section>
     </main>
 
