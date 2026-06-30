@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Underwater World & Legendary Blog</title>
-    
+    <title>3D Pro Workspace & Blogs</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <canvas id="bg-canvas"></canvas>
 
+    <nav class="navbar">
+        <div class="logo">ProWeb 3D</div>
+        <div class="menu-btn" id="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tools">Pro Tools</a></li>
+            <li><a href="#blog">Articles</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section id="home">
-            <h1>Deep Ocean</h1>
-            <p class="subtitle">Experience the Interactive 3D Web</p>
-            <div class="scroll-indicator">↓ SCROLL TO DIVE ↓</div>
+            <h1>Welcome to the Deep Web</h1>
+            <p class="subtitle">Interactive 3D Workspace & Professional Tools</p>
         </section>
 
-        <section id="about">
-            <h2>Explore The Unknown</h2>
-            <p style="max-width: 600px; line-height: 1.8; opacity: 0.9;">
-                This environment is dynamically generated using mathematics and WebGL. As you scroll down, the camera sinks deeper into the ocean, and the 3D fish smoothly follows your cursor's path without any lag.
-            </p>
-        </section>
-
-        <section id="blog">
-            <h2 style="margin-bottom: 10px;">Legendary Blogs</h2>
-            <p style="opacity: 0.8;">Premium glassmorphism cards for your content.</p>
-            
-            <div class="blog-container">
-                <div class="glass-card">
-                    <h3>The Coral Reef</h3>
-                    <p>Dive into the mesmerizing world of coral reefs and discover the vibrant life hidden beneath the waves.</p>
-                </div>
-                <div class="glass-card">
-                    <h3>Deep Sea Mysteries</h3>
-                    <p>Uncovering the secrets of the Mariana Trench and the alien-like creatures that glow in the dark.</p>
-                </div>
-                <div class="glass-card">
-                    <h3>Save The Oceans</h3>
-                    <p>Actionable steps we can take today to preserve our beautiful aquatic ecosystems for the future.</p>
+        <section id="tools">
+            <h2>Professional Utilities</h2>
+            <div class="tool-card glass-card">
+                <h3>Secure Password Generator</h3>
+                <p>Generate highly secure passwords instantly.</p>
+                <div class="tool-ui">
+                    <input type="text" id="password-display" readonly placeholder="Your password will appear here">
+                    <button id="generate-btn">Generate Password</button>
                 </div>
             </div>
         </section>
+
+        <section id="blog">
+            <h2 style="margin-bottom: 30px;">Legendary Articles</h2>
+            
+            <div class="blog-container">
+                <article class="glass-card full-blog">
+                    <h3>The Future of Digital Workflows & Custom Mobile Apps</h3>
+                    <p class="date">June 30, 2026</p>
+                    <p>In today's fast-paced digital ecosystem, the ability to build custom branded mobile applications rapidly is no longer a luxury, it's a necessity. Businesses are moving away from monolithic coding and leaning heavily into agile website development platforms and API-driven architectures.</p>
+                    <p>Integrating tools like ComPDF APIs or automated video animation scripts directly into your workflow reduces manual labor by hours. When you combine this with seamless electronic payment gateways and automated clearing networks, you create a self-sustaining digital product. The future belongs to those who can stitch these utility platforms together to create a frictionless user experience.</p>
+                </article>
+
+                <article class="glass-card full-blog">
+                    <h3>Navigating the Depths of WebGL</h3>
+                    <p class="date">June 25, 2026</p>
+                    <p>Adding 3D elements to web browsers used to require heavy plugins, but WebGL and libraries like Three.js have revolutionized how we interact with the web. By rendering graphics directly on the GPU, we can create immersive environments—like this very ocean you are swimming in—without sacrificing performance.</p>
+                    <p>The key to legendary web development is balancing aesthetics with speed. Optimizing polygon counts, using efficient lighting models, and ensuring mobile responsiveness are what separate amateur sites from truly professional experiences.</p>
+                </article>
+            </div>
+        </section>
         
-        <section style="min-height: 30vh;">
-            <p style="opacity: 0.5;">Developed with ❤️ for the Legendary Web</p>
+        <section style="min-height: 20vh;">
+            <p style="opacity: 0.5;">Developed for the Future.</p>
         </section>
     </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
-
