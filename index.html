@@ -3,69 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Pro Workspace & Blogs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>ProWeb 3D | The Future</title>
+    <!-- Premium Fonts: Orbitron for Sci-Fi Headings, Poppins for Text -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- 3D Environment -->
     <canvas id="bg-canvas"></canvas>
 
+    <!-- Professional Navigation -->
     <nav class="navbar">
-        <div class="logo">ProWeb 3D</div>
+        <div class="logo">ProWeb <span style="color: #ff6600;">3D</span></div>
+        <!-- 3 Line Hamburger Button -->
         <div class="menu-btn" id="menu-btn">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#tools">Pro Tools</a></li>
-            <li><a href="#blog">Articles</a></li>
-        </ul>
     </nav>
 
+    <!-- Full Screen Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <ul class="overlay-links">
+            <li><a href="#home" class="menu-link">Home</a></li>
+            <li><a href="#about" class="menu-link">About Creator</a></li>
+            <li><a href="#tools" class="menu-link">Pro Tools</a></li>
+            <li><a href="#blog" class="menu-link">Read Blogs</a></li>
+        </ul>
+    </div>
+
     <main>
+        <!-- Home Section -->
         <section id="home">
-            <h1>Welcome to the Deep Web</h1>
-            <p class="subtitle">Interactive 3D Workspace & Professional Tools</p>
+            <h1 class="glitch-text">Enter the <br><span class="highlight">Abyss</span></h1>
+            <p class="subtitle">Next-Generation Interactive 3D Web Experience</p>
+            <div class="scroll-indicator">Explore The Depths ↓</div>
         </section>
 
+        <!-- About Creator Section -->
+        <section id="about">
+            <h2 class="section-title">The Architect</h2>
+            <div class="glass-card profile-card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Workspace" class="blog-img">
+                <h3 style="color: #00d4ff; font-family: 'Orbitron', sans-serif;">Mamta Kumari</h3>
+                <p>Welcome to my digital workspace. I specialize in building custom branded mobile applications and producing customized video animations. This platform is a bridge between high-performance interactive 3D web technologies, advanced digital workflows, and seamless automated ecosystems.</p>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
         <section id="tools">
-            <h2>Professional Utilities</h2>
-            <div class="tool-card glass-card">
+            <h2 class="section-title">Professional Utilities</h2>
+            <div class="glass-card">
                 <h3>Secure Password Generator</h3>
-                <p>Generate highly secure passwords instantly.</p>
+                <p>Generate highly secure, encrypted passwords instantly.</p>
                 <div class="tool-ui">
                     <input type="text" id="password-display" readonly placeholder="Your password will appear here">
-                    <button id="generate-btn">Generate Password</button>
+                    <button id="generate-btn">Generate Security Key</button>
                 </div>
             </div>
         </section>
 
+        <!-- Blog Section with HD Pictures -->
         <section id="blog">
-            <h2 style="margin-bottom: 30px;">Legendary Articles</h2>
+            <h2 class="section-title">Legendary Articles</h2>
             
             <div class="blog-container">
+                <!-- Blog 1 -->
                 <article class="glass-card full-blog">
-                    <h3>The Future of Digital Workflows & Custom Mobile Apps</h3>
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Mobile Apps" class="blog-img">
+                    <h3>The Future of Custom Mobile Apps</h3>
                     <p class="date">June 30, 2026</p>
-                    <p>In today's fast-paced digital ecosystem, the ability to build custom branded mobile applications rapidly is no longer a luxury, it's a necessity. Businesses are moving away from monolithic coding and leaning heavily into agile website development platforms and API-driven architectures.</p>
-                    <p>Integrating tools like ComPDF APIs or automated video animation scripts directly into your workflow reduces manual labor by hours. When you combine this with seamless electronic payment gateways and automated clearing networks, you create a self-sustaining digital product. The future belongs to those who can stitch these utility platforms together to create a frictionless user experience.</p>
+                    <p>In today's fast-paced digital ecosystem, the ability to build custom branded mobile applications rapidly is no longer a luxury, it's a necessity. Integrating APIs directly into your workflow reduces manual labor by hours. The future belongs to those who can stitch these utility platforms together.</p>
                 </article>
 
+                <!-- Blog 2 -->
                 <article class="glass-card full-blog">
-                    <h3>Navigating the Depths of WebGL</h3>
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="3D Graphics" class="blog-img">
+                    <h3>Navigating WebGL & 3D Web</h3>
                     <p class="date">June 25, 2026</p>
-                    <p>Adding 3D elements to web browsers used to require heavy plugins, but WebGL and libraries like Three.js have revolutionized how we interact with the web. By rendering graphics directly on the GPU, we can create immersive environments—like this very ocean you are swimming in—without sacrificing performance.</p>
-                    <p>The key to legendary web development is balancing aesthetics with speed. Optimizing polygon counts, using efficient lighting models, and ensuring mobile responsiveness are what separate amateur sites from truly professional experiences.</p>
+                    <p>Adding 3D elements to web browsers has revolutionized how we interact with the web. By rendering graphics directly on the GPU, we can create immersive environments—like this very ocean—without sacrificing performance or causing lag on mobile devices.</p>
                 </article>
             </div>
         </section>
         
-        <section style="min-height: 20vh;">
-            <p style="opacity: 0.5;">Developed for the Future.</p>
+        <section style="min-height: 15vh;">
+            <p style="opacity: 0.5; letter-spacing: 2px;">Designed with precision.</p>
         </section>
     </main>
 
