@@ -1,20 +1,34 @@
-// === UI LOGIC (Menu & Tools) ===
-// 1. Mobile Hamburger Menu
+// === UI LOGIC (3-Line Menu & Tools) ===
 const menuBtn = document.getElementById('menu-btn');
-const navLinks = document.getElementById('nav-links');
+const closeBtn = document.getElementById('close-btn');
+const menuOverlay = document.getElementById('menu-overlay');
+const menuLinks = document.querySelectorAll('.menu-link');
 
+// Open Menu
 menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    menuOverlay.classList.add('active');
 });
 
-// 2. Password Generator Tool
+// Close Menu with X button
+closeBtn.addEventListener('click', () => {
+    menuOverlay.classList.remove('active');
+});
+
+// Close Menu when a link is clicked
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+    });
+});
+
+// Password Generator Tool
 const generateBtn = document.getElementById('generate-btn');
 const passwordDisplay = document.getElementById('password-display');
 
 generateBtn.addEventListener('click', () => {
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~";
     let password = "";
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 18; i++) {
         password += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     passwordDisplay.value = password;
@@ -23,7 +37,7 @@ generateBtn.addEventListener('click', () => {
 // === LEGENDARY 3D FISH ENGINE ===
 const canvas = document.querySelector('#bg-canvas');
 const scene = new THREE.Scene();
-scene.fog = new THREE.FogExp2(0x000a1a, 0.04);
+scene.fog = new THREE.FogExp2(0x000510, 0.05); // Darker deep ocean fog
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 10;
@@ -32,14 +46,14 @@ const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true 
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
-const directionalLight = new THREE.DirectionalLight(0x00d4ff, 2);
+const directionalLight = new THREE.DirectionalLight(0x00d4ff, 2.5);
 directionalLight.position.set(5, 10, 5);
 scene.add(directionalLight);
 
 const fish = new THREE.Group();
-const fishMaterial = new THREE.MeshStandardMaterial({ color: 0xff6600, roughness: 0.1, metalness: 0.8 });
+const fishMaterial = new THREE.MeshStandardMaterial({ color: 0xff4500, roughness: 0.2, metalness: 0.6 });
 
 const bodyGeo = new THREE.ConeGeometry(0.8, 3, 32);
 bodyGeo.rotateX(Math.PI / 2);
@@ -56,12 +70,12 @@ fish.add(tail);
 scene.add(fish);
 
 const particlesGeometry = new THREE.BufferGeometry();
-const particlesCount = 700;
+const particlesCount = 800;
 const posArray = new Float32Array(particlesCount * 3);
 
 for(let i = 0; i < particlesCount * 3; i++) { posArray[i] = (Math.random() - 0.5) * 40; }
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-const particlesMaterial = new THREE.PointsMaterial({ size: 0.05, color: 0x00d4ff, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending });
+const particlesMaterial = new THREE.PointsMaterial({ size: 0.06, color: 0x00d4ff, transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending });
 const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
 scene.add(particlesMesh);
 
@@ -89,12 +103,12 @@ function animate() {
     fish.position.x += (targetX - fish.position.x) * 0.05;
     fish.position.y += (targetY - fish.position.y) * 0.05;
 
-    tail.rotation.y = Math.sin(elapsedTime * 8) * 0.4; 
+    tail.rotation.y = Math.sin(elapsedTime * 10) * 0.4; 
     fish.rotation.y = Math.sin(elapsedTime * 3) * 0.1; 
-    fish.rotation.x = -mouseY * 0.3; 
-    fish.rotation.z = -mouseX * 0.2; 
+    fish.rotation.x = -mouseY * 0.4; 
+    fish.rotation.z = -mouseX * 0.3; 
 
-    particlesMesh.position.y = (elapsedTime * 0.8) % 20;
+    particlesMesh.position.y = (elapsedTime * 1) % 20;
     camera.position.y = -scrollY * 0.005;
 
     renderer.render(scene, camera);
